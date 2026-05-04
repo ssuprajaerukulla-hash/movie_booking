@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Movie Booking</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- LOGIN -->
+<div id="loginPage" class="login-page">
+  <div class="login-box">
+    <h2>🎬 Welcome</h2>
+    <input type="text" id="username" placeholder="Username"><br>
+    <input type="password" placeholder="Password"><br>
+    <button onclick="login()">Login</button>
+  </div>
+</div>
+
+<!-- APP -->
+<div id="app" class="hidden">
+
+<header>
+  <h1>🎬 Movie Booking</h1>
+</header>
+
+<!-- Movies -->
+<section class="movies" id="movieList"></section>
+
+<!-- Booking -->
+<section id="booking" class="hidden">
+  <h2 id="movieTitle"></h2>
+
+  <select id="theatre">
+    <option>PVR</option>
+    <option>INOX</option>
+    <option>Cinepolis</option>
+  </select>
+
+  <select id="time">
+    <option>10 AM</option>
+    <option>2 PM</option>
+    <option>6 PM</option>
+  </select>
+
+  <div class="screen">SCREEN</div>
+  <div class="seats" id="seats"></div>
+
+  <p>Seats: <span id="count">0</span></p>
+  <p>Total: ₹<span id="total">0</span></p>
+
+  <button onclick="confirmBooking()">Confirm Booking</button>
+</section>
+
+<!-- PAYMENT -->
+<section id="payment" class="hidden">
+  <h2>💳 Payment</h2>
+  <input type="text" placeholder="Card Number"><br><br>
+  <input type="text" placeholder="Expiry"><br><br>
+  <input type="text" placeholder="CVV"><br><br>
+  <button onclick="payNow()">Pay Now</button>
+</section>
+
+<!-- TICKET -->
+<section id="ticket" class="hidden">
+  <div class="ticket-box">
+    <h2>🎟️ Ticket</h2>
+    <p id="ticketInfo"></p>
+    <img id="qr" width="150">
+    <br><br>
+    <button onclick="printTicket()">Print</button>
+  </div>
+</section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
